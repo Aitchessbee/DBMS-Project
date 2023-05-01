@@ -1,0 +1,1 @@
+Select * from customer where customer_id not in (select customer_id from Payment);

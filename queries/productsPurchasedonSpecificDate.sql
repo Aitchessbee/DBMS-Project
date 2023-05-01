@@ -1,0 +1,1 @@
+select product_id from cart_item where (purchased='Y' and date_added='12-dec-2018');

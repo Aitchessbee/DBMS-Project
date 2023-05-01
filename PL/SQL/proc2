@@ -1,0 +1,12 @@
+    -- Procedure which returns the total quantity of product with the given ID
+    
+    create or replace procedure prod_details(p_id in varchar)
+    is
+    quan number(2);
+    begin
+    select quantity into quan from product where product_id=p_id;
+    exception
+    when no_data_found then
+    dbms_output.put_line('No such product exist !');
+    end;
+    /

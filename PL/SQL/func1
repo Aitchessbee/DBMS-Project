@@ -1,0 +1,13 @@
+--  Function which returns total number of products which a particular seller sells
+    
+    create or replace function totalProducts(sId in varchar)
+    return number
+    is
+    total number(2):=0;
+    begin
+    select count(*) into total
+    from product
+    where seller_id=sId;
+    return total;
+    end;
+    /
